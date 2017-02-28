@@ -30,7 +30,7 @@ body.addEventListener('submit', function(ev){
 
 function invite(email, fn){
   request
-  .post('{{api_gateway_url}}')
+  .post('{{cookiecutter.api_gateway_url}}')
   .send({email: email})
   .end(function(res){
     console.log(res);
