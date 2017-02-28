@@ -11,7 +11,10 @@ This project is composed of two core components - the S3 static website code and
 To begin, install `cookiecutter`, and create your project. Run:
 
     $ pip install cookiecutter
-    $ cookiecutter gh:cmeadws/aws-slack-invite
+    $ cookiecutter gh:cmeadows/aws-slack-invite
+    slack_domain []: <this is your domain found at yourdomain.slack.com>
+    slack_oauth_token []: <slack oauth token (https://api.slack.com/docs/oauth)>
+    api_gateway_url []: <your deployed API Gateway URL>
 
 ## Deployment
 
