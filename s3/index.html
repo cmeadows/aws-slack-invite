@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Join {{slac_domain}} on Slack!</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,user-scalable=no" name="viewport">
+    <link href="https://slack.global.ssl.fastly.net/272a/img/icons/favicon-32.png" rel="shortcut icon">
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+    <script type="text/javascript" src="static/superagent.js"></script>
+  </head>
+  <body>
+    <div class="splash">
+        <div class="logos">
+            <div class="logo slack"></div>
+        </div>
+
+        <p>Join {{slack_domain}} on Slack!</p>
+
+        <form>
+          <input autofocus="true" class="form-item" placeholder="example@domain.com" type="email">
+          <button class="loading">Get My Invite</button>
+        </form>
+
+        <footer>
+          powered by <a href="https://github.com/cmeadows/aws-slack-invite" target="_blank">aws-slack-invite</a>
+        </footer>
+
+        <script src="static/client.js"></script>
+    </div>
+  </body>
+</html>
