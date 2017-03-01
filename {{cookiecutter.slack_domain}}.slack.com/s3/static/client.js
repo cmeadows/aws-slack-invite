@@ -33,8 +33,7 @@ function invite(email, fn){
   .post('{{cookiecutter.api_gateway_url}}')
   .send({email: email})
   .end(function(res){
-    console.log(res);
-    if (res.error) {
+    if (res.error || res.body.success == false) {
       var err = new Error(res.body.msg || 'Server error');
       return fn(err);
     }
