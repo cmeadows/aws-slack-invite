@@ -11,14 +11,16 @@ logger.setLevel(logging.INFO)
 
 def lambda_handler(event, context):
 
+    email = event.get('body-json').get('email', '')
+
     # Simple check for email validation
-    if "@" not in event.get("email", ""):
+    if "@" not in email:
         raise Exception("The email provided is not valid.")
 
     url = 'https://slack.com/api/users.admin.invite'
     data = urllib.urlencode({
         "token": "{{cookiecutter.slack_oauth_token}}",
-        "email": event.get("email")})
+        "email": email})
 
     try:
         req = urllib2.Request(url, data)
